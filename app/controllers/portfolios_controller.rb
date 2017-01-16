@@ -9,10 +9,11 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
-    @portfolio_item = Portfolio.new(portfolio_params)
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body,technologies_attributes: [:name]))
 
     if @portfolio_item.save
       redirect_to @portfolio_item

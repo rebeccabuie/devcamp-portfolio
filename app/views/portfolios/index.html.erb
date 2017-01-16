@@ -1,11 +1,10 @@
 <h1>Portfolio Items</h1>
 
-<% @portfolio_items.each do |portfolio_item| %>
-  <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p>
-  <p><%= portfolio_item.subtitle %></p>
-  <p><%= portfolio_item.body %></p>
-  <p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?%></p>
-  <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
-  <%= link_to "Delete", portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?'} %>
-
+<% @portfolio_items.each do |p| %>
+  <p><%= link_to p.title, portfolio_show_path(p) %></p>
+  <p><%= p.subtitle %></p>
+  <p><%= p.body %></p>
+  <%= image_tag p.thumb_image unless p.thumb_image.nil?%>
+  <%= link_to "Edit", edit_portfolio_path(p) %>
+  <%= link_to "Delete", portfolio_path(p), method: :delete, data: { confirm: 'Are you sure?'} %>
   <% end %>
