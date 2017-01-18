@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20170117193725) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
@@ -23,8 +24,8 @@ ActiveRecord::Schema.define(version: 20170117193725) do
     t.string   "slug"
     t.integer  "status",     default: 0
     t.integer  "topic_id"
-    t.index ["slug"], name: "index_blogs_on_slug", unique: true, using: :btree
-    t.index ["topic_id"], name: "index_blogs_on_topic_id", using: :btree
+    t.index ["slug"], name: "index_blogs_on_slug", unique: true
+    t.index ["topic_id"], name: "index_blogs_on_topic_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -33,10 +34,10 @@ ActiveRecord::Schema.define(version: 20170117193725) do
     t.string   "sluggable_type", limit: 50
     t.string   "scope"
     t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
-    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
-    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
   create_table "portfolios", force: :cascade do |t|
@@ -54,6 +55,14 @@ ActiveRecord::Schema.define(version: 20170117193725) do
     t.integer  "percent_utilized"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "technologies", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "portfolio_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["portfolio_id"], name: "index_technologies_on_portfolio_id"
   end
 
   create_table "topics", force: :cascade do |t|
@@ -81,4 +90,6 @@ ActiveRecord::Schema.define(version: 20170117193725) do
   end
 
   add_foreign_key "blogs", "topics"
+
 end
+
