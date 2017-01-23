@@ -58,4 +58,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'buie_view_tool', git: 'https://github.com/rebeccabuie/buie_view_tool'
+gem 'buie_view_tool', '~> 0.1.0'

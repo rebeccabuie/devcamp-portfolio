@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/rebeccabuie/buie_view_tool
-  revision: 76ad7e43aa365cbabde6b9fc9b7b25a42bdc6ad9
-  specs:
-    buie_view_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -51,6 +45,7 @@ GEM
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
+    buie_view_tool (0.1.0)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -180,7 +175,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
-  buie_view_tool!
+  buie_view_tool (~> 0.1.0)
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.2)
@@ -200,4 +195,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.13.7
+   1.14.2
