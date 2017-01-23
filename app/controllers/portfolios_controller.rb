@@ -49,7 +49,7 @@ class PortfoliosController < ApplicationController
       redirect_to portfolios_path
     end
 
-    private
+  private
 
     def portfolio_params
       params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, :main_image)

@@ -4,12 +4,12 @@
 <p><%= @portfolio_item.subtitle %></p>
 <p><%= @portfolio_item.body %></p>
 <p><%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %></p>
-
+                                       
 <h3>Technologies Used:</h3>
 <% @portfolio_item.technologies.each do |t| %>
   <p><%= t.name %></p>
 <% end %>
 
-<!--   <%= link_to 'Back', portfolios_path %>
-  <%= link_to 'Edit', edit_portfolio_path(@portfolio_item) %>
-  <%= link_to 'Delete', portfolio_path(@portfolio_item), method: :delete %> -->
+<%= link_to 'Back', portfolios_path %>
+<%= link_to 'Edit', edit_portfolio_path(@portfolio_item) %> 
+<%= link_to 'Delete', portfolio_path(@portfolio_item), method: :delete %>
