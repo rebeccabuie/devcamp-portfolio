@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/rebeccabuie/buie_view_tool
+  revision: 76ad7e43aa365cbabde6b9fc9b7b25a42bdc6ad9
+  specs:
+    buie_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -174,6 +180,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
+  buie_view_tool!
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.2)
