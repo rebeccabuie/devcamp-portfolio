@@ -1,3 +1,42 @@
-<h1>Create a new Portfolio item</h1>
+<h1>Create a New Portfolio Item</h1>
 
-<%= render 'form' %>
+<%= form_for @portfolio_item do |f| %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+    <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <ul>
+    <%= f.fields_for :technologies do |tech_form| %>
+      <li>
+        <%= tech_form.label :name %>
+        <%= tech_form.text_field :name %>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="field">
+    <%= f.label :thumb_image %>
+    <%= f.text_area :thumb_image %>
+  </div>
+
+   <div class="field">
+    <%= f.label :main_image %>
+    <%= f.text_area :main_image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

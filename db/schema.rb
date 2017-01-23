@@ -56,6 +56,14 @@ ActiveRecord::Schema.define(version: 20170117193725) do
     t.datetime "updated_at",       null: false
   end
 
+  create_table "technologies", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "portfolio_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["portfolio_id"], name: "index_technologies_on_portfolio_id", using: :btree
+  end
+
   create_table "topics", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
@@ -81,4 +89,5 @@ ActiveRecord::Schema.define(version: 20170117193725) do
   end
 
   add_foreign_key "blogs", "topics"
+  add_foreign_key "technologies", "portfolios"
 end

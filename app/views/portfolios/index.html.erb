@@ -5,4 +5,6 @@
   <p><%= p.subtitle %></p>
   <p><%= p.body %></p>
   <%= image_tag p.thumb_image unless p.thumb_image.nil?%>
+  <%= link_to "Edit", edit_portfolio_path(p) %>
+  <%= link_to "Delete", portfolio_path(p), method: :delete, data: { confirm: "Are you sure?"} %>
   <% end %>
