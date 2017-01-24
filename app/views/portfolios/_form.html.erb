@@ -15,6 +15,15 @@
     <%= f.text_area :body %>
   </div>
 
+  <ul>
+    <%= f.fields_for :technologies do |tech_form| %>
+      <li>
+        <%= tech_form.label :name %>
+        <%= tech_form.text_field :name %>
+      </li>
+    <% end %>
+  </ul>
+
   <div class="field">
     <%= f.label :thumb_image %>
     <%= f.text_area :thumb_image %>
