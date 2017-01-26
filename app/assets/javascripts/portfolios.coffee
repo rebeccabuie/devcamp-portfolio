@@ -10,7 +10,7 @@ set_positions = ->
 ready = ->
   set_positions()
   $('.sortable').sortable()
-  $('.sortable').sortable().bind 'sortupdate', (e, ui) -> 
+  $('.sortable').sortable().bind 'sortupdate', (e, ui) ->
     updated_order = []
     set_positions()
     $('.card').each (i) ->
