@@ -21,3 +21,4 @@
 
 #Sublime
 .DS_store
+.env
