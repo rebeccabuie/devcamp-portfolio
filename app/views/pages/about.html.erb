@@ -1,12 +1,12 @@
 <div class="app-card-container">
   <div class="card">
+    <%= image_tag "About_Me.jpg", alt: "Profile Image", class: 'profile-img' %>
     <h1> About Me </h1>
 
     <hr>
-
+    
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag "ProfileImage.jpg", width: 300, alt: "Profile Image", class: 'profile-img' %>
         <div class="skills">
         <% @skills.each do |skill| %>
         <div class="skill">
