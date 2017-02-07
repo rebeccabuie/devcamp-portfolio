@@ -30,12 +30,22 @@ a:hover {
 html,
 body {
   height: 100%;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
   }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6, {
+  font-family: 'Sacramento', cursive;
+}
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -80,7 +90,6 @@ body {
   color: rgba(255,255,255,.5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
-  font-family: 'Dancing Script', cursive;
 }
 
 .nav-masthead .nav-link:hover,
