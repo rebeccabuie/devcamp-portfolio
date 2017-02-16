@@ -33,6 +33,15 @@ h6, .h6 {
  * Override Bootstrap's default container.
  */
 
+.blog-img {
+  border: 1px solid grey;
+  top: 0;
+  left: 0;
+  margin-bottom: 20px;
+  max-width: none;
+  width: 100%;
+}
+
 .container {
   max-width: 60rem;
 }
