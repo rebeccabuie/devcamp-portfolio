@@ -33,14 +33,6 @@ h6, .h6 {
  * Override Bootstrap's default container.
  */
 
-.blog-img {
-  border: 1px solid grey;
-  top: 0;
-  left: 0;
-  margin-bottom: 20px;
-  max-width: none;
-  width: 100%;
-}
 
 .container {
   max-width: 60rem;
@@ -95,6 +87,9 @@ h6, .h6 {
  */
 
 .blog-header {
+  background: image-url('BlogHeader.jpg') no-repeat;
+  background-size: cover;
+  padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   margin-bottom: 2rem;
   border-bottom: .05rem solid #eee;
@@ -103,10 +98,12 @@ h6, .h6 {
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: normal;
+  color: #ffffff;
+  text-shadow: 2px 2px #333;
 }
 .blog-description {
   font-size: 1.1rem;
-  color: #999;
+  color: #ffffff;
 }
 
 @media (min-width: 40em) {
