@@ -3,10 +3,10 @@
     <h1 class="blog-title">Rebecca's Blog</h1>
     <p class="lead blog-description">An example blog template built with Bootstrap.</p>
     <span>
-      <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      <%= link_to 'Write a New Blog', new_blog_path, :class => "blog-links" if logged_in?(:site_admin) %> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
     </span>
     <span>
-      <%= link_to "Topics", topics_path %>
+      <%= link_to "Topics", topics_path, :class => "blog-links" %>
     </span>
   </div>
 </div>

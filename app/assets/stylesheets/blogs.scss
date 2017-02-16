@@ -25,7 +25,7 @@ h5, .h5,
 h6, .h6 {
   font-family: 'Oranienbaum', serif;
   font-weight: normal;
-  color: #333;
+  color: #3a3a3a;
 }
 
 
@@ -93,7 +93,13 @@ h6, .h6 {
   padding-bottom: 1.25rem;
   margin-bottom: 2rem;
   border-bottom: .05rem solid #eee;
+  color: #bababa;
 }
+
+.blog-links {
+  color: #bababa;
+}
+
 .blog-title {
   margin-bottom: 0;
   font-size: 2rem;
@@ -153,6 +159,13 @@ h6, .h6 {
 .blog-post-title {
   margin-bottom: .25rem;
   font-size: 2.5rem;
+  color: #cdddeb;
+}
+.blog-post a {
+  color: #565656;
+}
+.blog-post a:hover {
+  color: #2b2b2b;
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
