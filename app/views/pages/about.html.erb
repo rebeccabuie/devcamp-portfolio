@@ -1,19 +1,34 @@
 <div class="app-card-container">
   <div class="card">
-    <%= image_tag "About_Me.jpg", alt: "Profile Image", class: 'profile-img' %>
-    <h1> About Me </h1>
-
-    <hr>
-    
+        <%= image_tag "About_Me.jpg", alt: "Profile Image", class: 'profile-img' %>
     <div class="row">
-      <p>Soon after high school, I started out with a job I was supposed to do basic work for, such as taking photos and cutting them out in photoshop. I was also shipping and packaging orders. I have been with the company for 5 years and during that time I was introduced to graphic and basic web design.<
+      <div class="col-md-6">
+        <div class="sidebar-module">
+          <h1> About Me </h1>
+          <p>I started out in this industry about seven years ago designing websites. I enjoyed HTML and CSS so much, I wanted to learn more. I quit my job and fully committed to learning full stack web development. I’ve had an opportunity to not only expand on HTML and CSS, but to learn Ruby, Rails, and Javascript/Typescript.</p>
+        </div>
+      </div>
 
-      <p>I fell in love with design and am always looking to get better. I have 4 solid years building, editing, and managing two websites for the business I work for. I was able to learn HTML and CSS and how to incorporate it with platforms like Magento and Wordpress. I’m looking to expand my knowledge in web building and design. I learn fast and I’m always up for a challenge!</p>
+      <div class="col-md-6">
+        <div class="sidebar-module">
+          <h1>Contact</h1>
+          
+          <p>9425 s Riverside Drive, Sandy, UT 84070</p>
+        
+          <p><%= number_to_phone "(801)604-2575" %></p>
+
+          <p><a href="mailto:rebeccabuie@gmail.com?subject=PortfolioContact" "email me">Email me</a> </p>
+          <h2>Elsewhere</h2>
+          <p class="list-unstyled social-links">
+            <p><a href="#"><%= fa_icon "github" %></a><a href="#"><%= fa_icon "facebook" %></a><a href="#"><%= fa_icon "twitter" %></a><a href="#"><%= fa_icon "instagram" %></a></p>
+        </div
+      </div>
     </div>
+  </div>
     
     <div class="button">
       <button
-        class="btn btn-primary"
+        class="btn btn-secondary"
         type="button"
         data-toggle="collapse"
         data-target="#jobHistory"
@@ -24,7 +39,7 @@
       </button>
 
       <button
-        class="btn btn-primary"
+        class="btn btn-secondary"
         type="button"
         data-toggle="collapse"
         data-target="#education"
@@ -58,24 +73,11 @@
         </div>
       </p>
     </div>
-      
-    <div class="skills">
-      <% @skills.each do |skill| %>
-      <div class="skill">
-        <h4><%= skill.title %></h4>
-          <div class="progress">
-            <div
-              class="progress-bar progress-bar-striped bg-warning"
-              role="progressbar"
-              aria-valuenow="<%= skill.percent_utilized %>"
-              aria-valuemax="100"
-              style="width: <%= skill.percent_utilized %>%"
-            ></div>
-          </div>
-      <% end %>
-      </div>
-    </div>
+    
+
+    <hr>
+
+
   </div>
 </div>
-
 
